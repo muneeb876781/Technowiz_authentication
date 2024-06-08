@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Tac+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #0A101E;
+    overflow: hidden;
+    position: relative;
+}
+
+.bodyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 80%;
+    width: 80%;
+    background-color: rgba(16, 22, 36, 0.5); 
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    z-index: 2;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(16, 22, 36, 0.5); 
+}
+
+.statscontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 97%;
+    width: 97%;
+    position: relative; 
+    background-color: rgba(16, 22, 36, 0.5); 
+    border: 5px solid #0A101E;
+}
+
+.statscontentmenubar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+    width: auto;
+    background: #0A101E;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: sticky;
+    top: 0; 
+    z-index: 10; 
+    padding: 10px 20px; 
+}
+
+.statscontentmenubar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: auto; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.statscontentmenubar ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 15px; 
+}
+
+.statscontentmenubar ul li a {
+    text-decoration: none;
+    color: #FEC544;
+    font-size: 20px; 
+    transition: 0.3s ease-in-out;
+}
+
+.statscontentmenubar ul li a:hover {
+    color: #fff;
+    font-size: 22px;
+}
+
+.statscontentmenubar ul li a.active {
+    color: #fff;
+    font-size: 22px;
+}
+
+.statscontentbody {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+}
+
+.statscontentbody::-webkit-scrollbar {
+    width: 0px;
+}
+.statscontentbody::-webkit-scrollbar-track {
+    background: #0A101E;
+}
+.statscontentbody::-webkit-scrollbar-thumb {
+    background: #172034;
+    border-radius: 10px;
+}
+.statscontentbody::-webkit-scrollbar-thumb:hover {
+    background: #0A101E;
+}
+
+.logindiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+}
+
+.loginform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+    background: #0A101E;
+    padding: 60px 30px;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.loginform h1 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #FEC544;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.loginform h1 span{
+    color: white;
+    font-weight: 300;
+}
+
+.loginform form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginform form label {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.loginform form input {
+    padding: 10px 40px;
+    margin: 10px;
+    background: #FEC544;
+    color: #0A101E;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.loginform form input::placeholder {
+    font-size: 18px;
+    text-align: center;
+    color: #172034;
+}
+
+.loginform form button {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #FEC544;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.loginform form button:hover {
+    background: #172034;
+    color: #fff;
+    border: none;
+}
+
+.gamesdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.gamesdiv h1 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #FEC544;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    padding: 20px 20px;
+    background: #0A101E;
+    border-radius: 20px;
+}
+
+.gamecard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: auto;
+    margin: 10px;
+}
+
+.gamecard img {
+    width: 70%;
+    height: auto;
+}
+
+.gamecard h2 {
+    color: white;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+    .loginform, .games {
+        width: 100%;
+    }
+    .loginform {
+        padding: 40px 20px;
+    }
+    .gamecard {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .loginform, .games {
+        width: 100%;
+    }
+    .loginform {
+        padding: 30px 15px;
+    }
+    .gamecard {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .loginform {
+        width: 90%;
+        padding: 20px 10px;
+    }
+    .gamecard {
+        width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .loginform {
+        width: 100%;
+        padding: 10px 5px;
+    }
+    .gamecard {
+        width: 90%;
+    }
+    .statscontentmenubar ul {
+        flex-direction: column;
+    }
+    .statscontentmenubar ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .loginform {
+        padding: 5px;
+    }
+    .loginform h1, .gamesdiv h1 {
+        font-size: 24px;
+    }
+    .loginform form input, .loginform form button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
