@@ -22,16 +22,30 @@
                     </div>
                     <div class="statscontentbody">
                         <div class="logindiv">
-                            <div class="loginform">
-                                <h1><span>all you can</span> Play</h1>
-                                <form action="{{ route('login') }}" method="POST">
-                                    @csrf
-                                    <label for="phone_number">Enter Your Jazz Number Here:</label>
-                                    <input type="text" id="phone_number" name="phone_number" required
-                                        pattern="03[0-9]{9}" placeholder="03xxxxxxxx">
-                                    <button type="submit">Login</button>
-                                </form>
-                            </div>
+
+                            @guest
+                                <div class="loginform">
+                                    <h1><span>all you can</span> Play</h1>
+                                    <form action="{{ route('login') }}" method="POST">
+                                        @csrf
+                                        <label for="phone_number">Enter Your Jazz Number Here:</label>
+                                        <input type="text" id="phone_number" name="phone_number" required
+                                            pattern="03[0-9]{9}" placeholder="03xxxxxxxx">
+                                        <button type="submit">Login</button>
+                                    </form>
+                                </div>
+                            @endguest
+                            @auth
+                                <div class="loginform">
+                                    <h1><span>Welcome,</span> {{ auth()->user()->phone_number }}!</h1>
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                </div>
+                            @endauth
+
+
                         </div>
                         <div class="gamesdiv">
                             <h1>Games</h1>
