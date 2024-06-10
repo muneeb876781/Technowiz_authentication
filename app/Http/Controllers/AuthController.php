@@ -25,12 +25,12 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->route('welcome');
+        return redirect()->route('login');
     }
 
     public function welcome()
     {
-        return view('home');
+        return view('welcome');
     }
 
     public function logout(Request $request)
